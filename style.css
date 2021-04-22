@@ -1,0 +1,201 @@
+/* /////////// efecto comillas  ////////// */
+
+.quote::before {
+  content: "\275d";
+  color: aqua;
+  font-size: 2em;
+}
+
+.quote::after {
+  content: "\275E";
+  color: blueviolet;
+  font-size: 2em;
+}
+
+/* ///////////////////// car boder colores /////////////////////////// */
+
+.card {
+  width: 100%;
+  max-width: 25rem;
+  /* min-height: 16rem; */
+  position: relative;
+  background-color: #fff;
+}
+
+.card__title {
+  padding: 1rem;
+  border-radius: 0 7rem;
+  box-shadow: 0 -4px 4px #fc87da, 0 4px 4px #41e0e7;
+  min-height: 12rem;
+}
+
+/* //////////////////////// doble car /////////////////// */
+
+.card--rotante {
+  padding: 1rem;
+}
+
+.card--rotante:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #41e0e7;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: rotate(10deg);
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5);
+}
+
+.contenedor {
+  width: 100%;
+  max-width: 22rem;
+  min-height: 14rem;
+  position: relative;
+  background-color: rgb(221, 236, 11);
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* /////////////////  car con movimiento  //////////////////////// */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+}
+
+.box {
+  color: rgb(80, 80, 80);
+  width: 250px;
+  height: 250px;
+  background: rgb(24, 24, 24);
+  font-size: 2rem;
+  font-family: cursive;
+  position: relative;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  background: linear-gradient(45deg, #3dec28, #00000000, #00000000, #1c58c9);
+  z-index: -1;
+  transition: all 0.6s;
+}
+
+.box:hover::before {
+  transform: rotate(270deg);
+}
+
+/* ///////////////   login ///////////// */
+
+/* ++++++++ tamaño del login  ++++++++++++ */
+.login-div {
+  width: 330px;
+  height: 600px;
+  padding: 60px 35px 35px 35px;
+  border-radius: 40px;
+
+  background: #d5edff;
+  /* background: #ecf0f3; */
+  box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+  margin: auto;
+}
+
+/* +++++++++++  diseño del logo ++++++++ */
+.logo {
+  background: url("musica.png") center center no-repeat;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+  box-shadow: 
+    /* logo shadow */ 0px 0px 2px #5f5f5f,
+    /* offset */ 0px 0px 0px 5px #ecf0f3,
+    /* bottom right */ 8px 8px 15px #a7aaaf,
+    /* top left */ -8px -8px 15px #ffffff;
+}
+
+.title {
+  text-align: center;
+  font-size: 28px;
+  padding-top: 24px;
+  letter-spacing: 0.5px;
+}
+
+.sub-title {
+  text-align: center;
+  font-size: 15px;
+  padding-top: 7px;
+  letter-spacing: 3px;
+}
+
+/* ++++++++++++ diseño de los input ++++++++++ */
+.fields {
+  width: 100%;
+  padding: 20px 5px 5px 5px;
+}
+
+.fields input {
+  border: none;
+  outline: none; /*oculata el cuadro al selcionar*/
+  background: none; /*oculata el cuador de texto del input*/
+  font-size: 18px;
+  color: #555;
+  padding: 15px 5px 15px 15px;
+  width: 280px;
+}
+
+.username,
+.password {
+  margin-bottom: 30px;
+  border-radius: 25px;
+  box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #ffffff;
+}
+
+.fields svg {
+  /* permite ver la contraseña */
+  height: 22px;
+  margin: 0 10px -3px 35px;
+}
+
+/* ++++++++++ diseño del boton ++++++++++++++ */
+
+.signin-button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  height: 60px;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "lato", sans-serif;
+  color: #fff;
+  text-align: center;
+  background: #24cfaa;
+  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
+  transition: 0.5s;
+}
+
+.signin-button:hover {
+  background: #2fdbb6;
+}
+
+/* ++++++ diseño del link +++++++++ */
+.link {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.link a {
+  text-decoration: none;
+  color: #aaa;
+  font-size: 15px;
+}
